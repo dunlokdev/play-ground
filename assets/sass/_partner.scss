@@ -1,0 +1,17 @@
+.partner {
+	margin-bottom: 19rem;
+	&__container {
+		max-width: 83rem;
+		text-align: center;
+	}
+	&__title {
+		font-size: 2rem;
+		font-weight: bold;
+		padding-bottom: 7rem;
+		border-bottom: 3px solid;
+		margin-bottom: 7rem;
+	}
+	&__list {
+		@include flex(center, space-between, wrap);
+	}
+}

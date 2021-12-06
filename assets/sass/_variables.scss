@@ -1,0 +1,24 @@
+// Biến:
+$text-color: #1a2b5f;
+$primary-color: #ffea7b;
+$second-color: #ffcb7a;
+$text-gray: #bfc4d2;
+$font-family: 'Poppins', sans-serif;
+
+// mixin
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+@mixin flex(
+	$align: flex-start,
+	$justify: flex-start,
+	$wrap: nowrap,
+	$dir: row
+) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-wrap: $wrap;
+	flex-direction: $dir;
+}

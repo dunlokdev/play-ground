@@ -1,0 +1,52 @@
+// Độ rộng tối đa 1440px
+.wrapper {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+// Độ rộng nội dung là 1170px
+.container {
+	max-width: 1210px;
+	padding: 0 2rem; // Khi xuống điện thoại không bị dính lề
+	margin: 0 auto;
+}
+.btn {
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	font-size: 1.6rem;
+	text-align: center;
+	color: $text-color;
+	display: inline-block;
+	padding: 1.2rem 3.5rem;
+	background-color: transparent;
+	font-weight: 600;
+	transition: 0.3s;
+	&:hover {
+		background-color: $text-color;
+		color: #fff;
+	}
+	&--border {
+		border: 2px solid currentColor;
+	}
+	&--rounded {
+		border-radius: 5rem;
+	}
+	&--primary {
+		background-image: linear-gradient(to bottom, $primary-color, $second-color);
+		&.has-shadow {
+			box-shadow: 0 10px 45px -5px $primary-color;
+		}
+	}
+}
+.text-clamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	&--1 {
+		-webkit-line-clamp: 1;
+	}
+	&--2 {
+		-webkit-line-clamp: 2;
+	}
+}

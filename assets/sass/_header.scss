@@ -1,0 +1,35 @@
+.header {
+	padding-top: 4rem;
+	&__inner {
+		@include flex(center);
+	}
+	&__menu {
+		&-list {
+			@include flex(center);
+			margin-left: auto;
+		}
+		&-item {
+			margin-left: 5rem;
+		}
+		&-link {
+			font-size: 1.6rem;
+			color: $text-color;
+			transition: all 0.25s linear;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+	.btn {
+		margin-left: 7.4rem;
+	}
+}
+.logo {
+	object-fit: cover;
+}
+.bars {
+	font-size: 3.5rem;
+	display: none;
+	position: absolute;
+	right: 2rem;
+}

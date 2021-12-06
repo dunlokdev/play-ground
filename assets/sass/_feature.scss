@@ -1,0 +1,121 @@
+.feature {
+	padding-top: 18rem;
+	&__item {
+		display: flex;
+		align-items: stretch;
+		margin-bottom: 15rem;
+		&:nth-child(odd) {
+			.feature__info {
+				padding: 9.7rem 0 0 10.1rem;
+			}
+		}
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+			.feature__info {
+				padding: 9.7rem 10rem 0 0;
+			}
+		}
+	}
+	&__image {
+		object-fit: cover;
+		flex-shrink: 0;
+	}
+
+	&__info {
+		flex-grow: 1;
+	}
+	&__title {
+		font-size: 4rem;
+		font-weight: 600;
+		margin-bottom: 2.5rem;
+	}
+	&__desc {
+		color: #7d87a5;
+		font-weight: 600;
+		font-size: 1.6rem;
+		margin-bottom: 4rem;
+		line-height: 1.8;
+	}
+	&-intro {
+		&__item {
+			font-weight: 600;
+			margin-bottom: 3rem;
+			text-decoration: underline;
+			font-size: 1.8rem;
+			cursor: pointer;
+			&--circle {
+				display: inline-block;
+				text-decoration: none;
+				position: relative;
+				padding-left: 3rem;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					@include size(2rem);
+					border-radius: 4rem;
+					background-color: #ff6adf;
+					z-index: -1;
+					transition: 0.3s;
+				}
+				&:nth-child(2)::before {
+					background-color: #92fa3c;
+				}
+				&:nth-last-child(2)::before {
+					background-color: #1ec0f4;
+				}
+				&:last-child::before {
+					background-color: #ff899c;
+				}
+				&:hover::before {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-best {
+		&__list {
+			@include flex(flex-start, space-between, wrap);
+			margin-bottom: -5rem;
+		}
+		&__item {
+			width: calc(50% - 3rem);
+			margin-bottom: 5rem;
+		}
+		&__icon {
+			display: inline-block;
+			@include size(5rem);
+			border-radius: 4px;
+			font-size: 2rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 1rem;
+			color: orange;
+			position: relative;
+			z-index: 1;
+			&::after {
+				content: '';
+				@include size(100%);
+				border-radius: inherit;
+				background-color: currentColor;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				opacity: 0.25;
+			}
+		}
+		&__title {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+			font-weight: 600;
+		}
+		&__desc {
+			font-weight: 300;
+		}
+	}
+}
